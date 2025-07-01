@@ -110,12 +110,17 @@ PRODIGY_GA_05/
 
 ## Output images
 
-### PC View
-![Task 4 - Image 2](images/Task%204%20image%202.png)
+#### PC View
+<p align="center">
+  <img src="images/Task%204%20image%201.png" width="45%" />
+  <img src="images/Task%204%20image%202.png" width="45%" />
+</p>
 
-### Mobile View
-![Task 4 - Image 4](images/image%204%20task%204jpg.jpg)
-![Task 4 - Image 3](images/image%203%20task%204.jpg)
+#### Mobile View
+<p align="center">
+  <img src="images/image%203%20task%204.jpg" width="45%" />
+  <img src="images/image%204%20task%204jpg.jpg" width="45%" />
+</p>
 
 ## 📄 License
 
