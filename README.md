@@ -27,6 +27,7 @@ PRODIGY_GA_05/
 │   └── style_transfer/
 │       └── model.py          # Style transfer logic
 ├── requirements.txt          # Python dependencies
+├── Images                    # added images for the project output
 └── README.md                 # Project documentation
 ```
 
@@ -106,6 +107,12 @@ PRODIGY_GA_05/
 - Built using this amazing tutorial from Tensorflow (https://www.tensorflow.org/tutorials/generative/style_transfer) and GeeksforGeeks (https://www.geeksforgeeks.org/deep-learning/neural-style-transfer-in-keras/).
 
 ---
+
+## Output images
+
+![PC Output screenshot](images/Task_4_image_2.png)
+![Mobile Output screenshot - Image Generation](images/image_3_task4.jpg)
+![Mobile Output screenshot - UI](images/image_4_task4jpg.jpg)
 
 ## 📄 License
 
