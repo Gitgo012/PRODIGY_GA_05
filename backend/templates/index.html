@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Neural Style Transfer | AI Image Generator</title>
+    <link rel="stylesheet" href="/static/style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <header class="hero">
+      <div class="hero-content">
+        <h1>AI Neural Style Transfer</h1>
+        <p>
+          Transform your photos with the power of AI. Upload a content image and
+          a style image, and watch the magic happen!
+        </p>
+      </div>
+    </header>
+    <main>
+      <section class="upload-section">
+        <form
+          id="upload-form"
+          method="post"
+          action="/transfer"
+          enctype="multipart/form-data"
+        >
+          <div class="drop-zone" id="drop-zone">
+            <div class="drop-icon">📷</div>
+            <div class="drop-text">
+              Drag & drop images here or click to select
+            </div>
+            <input
+              type="file"
+              name="content"
+              id="content-input"
+              accept="image/*"
+              required
+              hidden
+            />
+            <input
+              type="file"
+              name="style"
+              id="style-input"
+              accept="image/*"
+              required
+              hidden
+            />
+          </div>
+          <div class="preview-row">
+            <div class="preview-col">
+              <span>Content Image</span>
+              <img
+                id="content-preview"
+                class="img-preview"
+                src="{% if content_url %}{{ content_url }}{% endif %}"
+                alt="Content Preview"
+                style="{% if not content_url %}display:none;{% endif %}"
+              />
+              <button
+                type="button"
+                class="select-btn"
+                onclick="document.getElementById('content-input').click()"
+              >
+                Select Content
+              </button>
+            </div>
+            <div class="preview-col">
+              <span>Style Image</span>
+              <img
+                id="style-preview"
+                class="img-preview"
+                src="{% if style_url %}{{ style_url }}{% endif %}"
+                alt="Style Preview"
+                style="{% if not style_url %}display:none;{% endif %}"
+              />
+              <button
+                type="button"
+                class="select-btn"
+                onclick="document.getElementById('style-input').click()"
+              >
+                Select Style
+              </button>
+            </div>
+          </div>
+          <button type="submit" class="cta-btn">Generate Image</button>
+        </form>
+        <div id="loading" class="loading-area" style="display: none">
+          <div class="spinner"></div>
+          <div class="loading-text">Generating your image...</div>
+        </div>
+        {% if output_url %}
+        <div class="result-section">
+            <span>Generated Image</span>
+            <img src="{{ output_url }}" alt="Output Image" class="result-img" />
+          </div>
+        </div>
+        {% endif %}
+      </section>
+      <section class="features">
+        <h2>Why Use Our AI Image Generator?</h2>
+        <div class="features-row">
+          <div class="feature">
+            <div class="feature-icon">⚡</div>
+            <div class="feature-title">Fast & Powerful</div>
+            <div class="feature-desc">
+              State-of-the-art neural networks deliver results in seconds.
+            </div>
+          </div>
+          <div class="feature">
+            <div class="feature-icon">🎨</div>
+            <div class="feature-title">Creative Freedom</div>
+            <div class="feature-desc">
+              Mix any photo with any art style for unique creations.
+            </div>
+          </div>
+          <div class="feature">
+            <div class="feature-icon">🔒</div>
+            <div class="feature-title">Private & Secure</div>
+            <div class="feature-desc">
+              Your images are processed securely and never shared.
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <span>Made with ❤️ as part of Internship task 4</span>
+    </footer>
+    <script src="/static/script.js"></script>
+  </body>
+</html>
