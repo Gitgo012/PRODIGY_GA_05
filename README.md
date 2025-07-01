@@ -103,7 +103,7 @@ PRODIGY_GA_05/
 
 - Built as part of the Prodigy Infotech Internship.
 - Uses [TensorFlow Hub](https://tfhub.dev/) for neural style transfer.
-- UI inspired by modern AI image generation platforms.
+- Built using this amazing tutorial from Tensorflow (https://www.tensorflow.org/tutorials/generative/style_transfer) and GeeksforGeeks (https://www.geeksforgeeks.org/deep-learning/neural-style-transfer-in-keras/).
 
 ---
 
